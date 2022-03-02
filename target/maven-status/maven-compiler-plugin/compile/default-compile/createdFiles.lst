@@ -1,0 +1,6 @@
+com\mycompany\programword\App.class
+com\mycompany\programword\DbHolder.class
+module-info.class
+com\mycompany\programword\PrimaryController.class
+com\mycompany\programword\TekstClass.class
+com\mycompany\programword\SecondaryController.class

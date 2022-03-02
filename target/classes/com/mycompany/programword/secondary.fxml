@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4287f5;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.programword.PrimaryController">
+   <children>
+      <AnchorPane layoutX="99.0" layoutY="69.0" prefHeight="324.0" prefWidth="495.0">
+         <children>
+            <TextField layoutX="-1.0" layoutY="-3.0" prefHeight="324.0" prefWidth="495.0" />
+         </children>
+      </AnchorPane>
+      <ColorPicker layoutX="14.0" layoutY="14.0" />
+      <ComboBox fx:id="qMenu" layoutX="167.0" layoutY="14.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
