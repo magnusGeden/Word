@@ -161,6 +161,7 @@ public class PrimaryController implements Initializable{
             Logger.getLogger(PrimaryController.class.getName()).log(Level.SEVERE, null, ex);
         }
                  
+        
              }
     
      ArrayList<TekstClass> GetAllQuestions()
