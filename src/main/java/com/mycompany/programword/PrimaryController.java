@@ -46,7 +46,7 @@ public class PrimaryController implements Initializable{
     ColorPicker ColorMenue;
     
     @FXML
-    ColorPicker TextBtColor;
+    ColorPicker BgColor;
     
     @FXML
     TextArea Text;
@@ -208,17 +208,17 @@ public class PrimaryController implements Initializable{
     public void changeColor (ActionEvent event)
     {
         
-        Text.setStyle("-fx-control-inner-background:#"+TextBtColor.getValue().toString().substring(2)+";");
-        //Text.setStyle("-fx-highlight-Arrays.fill: #000000;");
-   
+       
+   Color myColor = ColorMenue.getValue();
+        Text.setBackground(new Background(new BackgroundFill(myColor, null, null)));
+        System.out.println(ColorMenue.getValue().toString().substring(2));
+        Text.setStyle("-fx-text-fill: #" + ColorMenue.getValue().toString().substring(2)+";");
     
     }
     public void changeBackColor(ActionEvent event)
     {
-        Color myColor = ColorMenue.getValue();
-        Text.setBackground(new Background(new BackgroundFill(myColor, null, null)));
-        System.out.println(ColorMenue.getValue().toString().substring(2));
-        Text.setStyle("-fx-text-fill: #" + ColorMenue.getValue().toString().substring(2)+";");
+        Text.setStyle("-fx-control-inner-background:#"+BgColor.getValue().toString().substring(2)+";");
+        //Text.setStyle("-fx-highlight-Arrays.fill: #000000;");
     
     }
     /*

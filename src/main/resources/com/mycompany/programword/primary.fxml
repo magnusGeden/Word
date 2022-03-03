@@ -16,7 +16,7 @@
             <TextArea fx:id="Text" layoutX="-1.0" prefHeight="324.0" prefWidth="495.0" />
          </children>
       </AnchorPane>
-      <ColorPicker fx:id="ColorMenue" layoutX="333.0" layoutY="39.0" onAction="#changeBackColor" prefHeight="25.0" prefWidth="94.0" promptText="Text color" />
+      <ColorPicker fx:id="ColorMenue" layoutX="333.0" layoutY="39.0" onAction="#changeColor" prefHeight="25.0" prefWidth="94.0" promptText="Text color" />
       <Button fx:id="SaveBtn" layoutX="100.0" layoutY="39.0" mnemonicParsing="false" onAction="#SaveText" text="Save text" />
       <Text layoutX="351.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tekst color" />
       <Text fill="RED" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YourNoteProgram">
@@ -30,7 +30,7 @@
           <MenuItem fx:id="Text12" mnemonicParsing="false" onAction="#minusTextSize" text="Minus Tekst size" />
         </items>
       </MenuButton>
-      <ColorPicker fx:id="TextBtColor" layoutX="241.0" layoutY="39.0" onAction="#changeColor" prefHeight="25.0" prefWidth="85.0" />
+      <ColorPicker fx:id="BgColor" layoutX="241.0" layoutY="39.0" onAction="#changeBackColor" prefHeight="25.0" prefWidth="85.0" />
       <MenuButton fx:id="AllNotes" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" text="Files">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
