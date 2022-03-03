@@ -25,6 +25,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 
 public class PrimaryController implements Initializable{
 
@@ -45,17 +46,44 @@ public class PrimaryController implements Initializable{
     ColorPicker ColorMenue;
     
     @FXML
-    ColorPicker TextBgColor;
+    ColorPicker TextBtColor;
     
     @FXML
     TextArea Text;
     
     @FXML
-    MenuButton ColorMenueText;
+    MenuButton SizeButton;
     
     @FXML
     MenuButton AllNotes;
     
+    @FXML
+    MenuItem Text10; 
+    
+    @FXML
+    MenuItem Text12;      
+    
+    @FXML
+    MenuButton fontFace;
+    
+    @FXML
+    MenuItem fontFace1;
+    
+    @FXML
+    MenuItem fontFace2;
+    
+    @FXML
+    MenuItem fontFace3;
+    
+    @FXML
+    MenuItem fontFace4;
+    
+    @FXML
+    MenuItem fontFace5;
+    
+    
+    public int fontSize = 14;
+        
     
     
     ArrayList<TekstClass> tekst = new ArrayList<TekstClass>();
@@ -68,7 +96,7 @@ public class PrimaryController implements Initializable{
     {
         
         ArrayList<TekstClass> _TekstClass = new ArrayList<>();
-        _TekstClass = GetAllQuestions();
+        _TekstClass = GetAllFiles();
         for(int i = 0; i < _TekstClass.size(); i++)
            
         {
@@ -78,6 +106,68 @@ public class PrimaryController implements Initializable{
         System.out.println("Starting...");
         Text.setStyle("-fx-wrap-text:true;");
         Reload();
+    }
+    
+    @FXML
+    public void familySystem(){
+    
+    Text.setFont(Font.font ("System", 20));
+
+    }
+    
+    @FXML
+    public void familyRockwellExtraBold(){
+    
+    Text.setFont(Font.font ("Rockwell Extra Bold", 20));
+
+    }
+    
+    @FXML
+    public void familySymbolPi(){
+    
+    Text.setFont(Font.font ("SymbolPi", 20));
+
+    }
+    
+    @FXML
+    public void familyVivaldi(){
+    
+    Text.setFont(Font.font ("Vivaldi", 20));
+
+    }
+    
+     @FXML
+    public void familyWideLatin(){
+    
+    Text.setFont(Font.font ("Wide Latin", 20));
+
+    }
+    
+    @FXML
+    public void plusTextSize()
+    {
+        
+       fontSize++; 
+       applyStyle();
+        
+    }
+    
+    @FXML
+    public void minusTextSize()
+    {
+        
+        
+       fontSize--; 
+       applyStyle();
+    }
+    
+    public void applyStyle()
+    {
+    
+        Text.setStyle("-fx-font-size: "+ Integer.toString(fontSize));
+        
+    
+    
     }
     
     @FXML
@@ -96,7 +186,7 @@ public class PrimaryController implements Initializable{
     {
      
      AllNotes.getItems().clear();
-        ArrayList<TekstClass> l = GetAllQuestions();
+        ArrayList<TekstClass> l = GetAllFiles();
         for(int i = 0 ; i<l.size();i++) 
         {
             MenuItem mi = new MenuItem(Integer.toString(l.get(i).ID));
@@ -118,7 +208,7 @@ public class PrimaryController implements Initializable{
     public void changeColor (ActionEvent event)
     {
         
-        Text.setStyle("-fx-control-inner-background:#"+TextBgColor.getValue().toString().substring(2)+";");
+        Text.setStyle("-fx-control-inner-background:#"+TextBtColor.getValue().toString().substring(2)+";");
         //Text.setStyle("-fx-highlight-Arrays.fill: #000000;");
    
     
@@ -164,7 +254,7 @@ public class PrimaryController implements Initializable{
         
              }
     
-     ArrayList<TekstClass> GetAllQuestions()
+     ArrayList<TekstClass> GetAllFiles()
     {
         String sql = "SELECT * FROM `WordTextfiles`";
         ArrayList<TekstClass> list = new ArrayList<TekstClass>();

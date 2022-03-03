@@ -17,29 +17,35 @@
          </children>
       </AnchorPane>
       <ColorPicker fx:id="ColorMenue" layoutX="333.0" layoutY="39.0" onAction="#changeBackColor" prefHeight="25.0" prefWidth="94.0" promptText="Text color" />
-      <Button fx:id="SaveBtn" layoutX="131.0" layoutY="39.0" mnemonicParsing="false" onAction="#SaveText" text="Save" />
+      <Button fx:id="SaveBtn" layoutX="100.0" layoutY="39.0" mnemonicParsing="false" onAction="#SaveText" text="Save text" />
       <Text layoutX="351.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tekst color" />
       <Text fill="RED" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YourNoteProgram">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <MenuButton fx:id="ColorMenueText" layoutX="429.0" layoutY="39.0" mnemonicParsing="false" onAction="#changeColor" text="Inner background color">
+      <MenuButton fx:id="SizeButton" layoutX="475.0" layoutY="39.0" mnemonicParsing="false" text="Tekst size">
         <items>
-          <MenuItem mnemonicParsing="false" onAction="#changeColor" text="Red" />
-          <MenuItem mnemonicParsing="false" text="Green" />
-            <MenuItem mnemonicParsing="false" text="Blue" />
-            <MenuItem mnemonicParsing="false" text="Yellow" />
-            <MenuItem mnemonicParsing="false" text="Black" />
-            <MenuItem mnemonicParsing="false" text="Grey" />
+          <MenuItem fx:id="Text10" mnemonicParsing="false" onAction="#plusTextSize" text="Plus Tekst size" />
+          <MenuItem fx:id="Text12" mnemonicParsing="false" onAction="#minusTextSize" text="Minus Tekst size" />
         </items>
       </MenuButton>
-      <ColorPicker fx:id="TextBgColor" layoutX="241.0" layoutY="39.0" onAction="#changeColor" prefHeight="25.0" prefWidth="85.0" />
-      <MenuButton fx:id="AllNotes" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" text="MenuButton">
+      <ColorPicker fx:id="TextBtColor" layoutX="241.0" layoutY="39.0" onAction="#changeColor" prefHeight="25.0" prefWidth="85.0" />
+      <MenuButton fx:id="AllNotes" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" text="Files">
         <items>
           <MenuItem mnemonicParsing="false" text="Action 1" />
           <MenuItem mnemonicParsing="false" text="Action 2" />
         </items>
       </MenuButton>
+      <MenuButton fx:id="fontFace" layoutX="473.0" layoutY="10.0" mnemonicParsing="false" onAction="#familySystem" text="Skrifttyper">
+        <items>
+          <MenuItem fx:id="fontFace1" mnemonicParsing="false" onAction="#familySystem" text="System Original" />
+          <MenuItem fx:id="fontFace2" mnemonicParsing="false" onAction="#familyRockwellExtraBold" text="Rockwell Extra Bold" />
+            <MenuItem fx:id="fontFace3" mnemonicParsing="false" onAction="#familySymbolPi" text="SymbolPi" />
+            <MenuItem fx:id="fontFace4" mnemonicParsing="false" onAction="#familyVivaldi" text="Vivaldi" />
+            <MenuItem fx:id="fontFace5" mnemonicParsing="false" onAction="#familyWideLatin" text="Wide Latin" />
+        </items>
+      </MenuButton>
+      <Text layoutX="241.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Background color" />
    </children>
 </AnchorPane>
